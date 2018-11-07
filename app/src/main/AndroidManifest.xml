@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hie2j.intent_study">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity_a"
+            android:exported="true"
+            android:label="第一饭堂">
+            <intent-filter>
+                <action android:name="com.hie2j.intent_study.eating" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity_b"
+            android:label="第二饭堂">
+            <intent-filter>
+                <action android:name="com.hie2j.intent_study.eating" />
+                <action android:name="ji_pa_fan"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter></activity>
+        <activity android:name=".Activity_c"
+            android:label="第三饭堂">
+            <intent-filter>
+                <action android:name="com.hie2j.intent_study.eating" />
+                <action android:name="ji_pa_fan"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter></activity>
+    </application>
+
+</manifest>
